@@ -23,24 +23,28 @@ function pickRandomNum(min,max){
     return randomNum;
 }
 
+function calculator(){
+    
+}
+
 $("#blueCrystal").on("click", function(){
-    console.log("Blue")
-    blueNum = pickRandomNum(1,12);
+    console.log(blueNum, "Blue");
+    return blueNum;
 });
 
 $("#orangeCrystal").on("click", function(){
-    console.log("Orange")
-    orangeNum = pickRandomNum(1,12);
+    console.log(orangeNum, "Orange");
+    return orangeNum;
 });
 
 $("#clearCrystal").on("click", function(){
-    console.log("Clear")
-    clearNum = pickRandomNum(1,12);
+    console.log(clearNum, "Clear");
+    return clearNum;
 });
 
 $("#greenCrystal").on("click", function(){
-    console.log("Green")
-    greenNum = pickRandomNum(1,12);
+    console.log(greenNum, "Green");
+    return greenNum;
 });
 
 
