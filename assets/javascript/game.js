@@ -59,8 +59,6 @@ $("#greenCrystal").on("click", function(){
 });
 
 
-
-
 function updateWinValueOnUI (newWinValue){
     $("#winsCounter").html(newWinValue);
 }
