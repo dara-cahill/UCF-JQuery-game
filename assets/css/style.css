@@ -6,6 +6,15 @@ body {
     height: 150px;
 }
 
+.imagesCss {
+    width: 80%;
+    border: 10px solid green;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+}
+
 h1 {
     font-size: 90px;
     font-weight: bold;
