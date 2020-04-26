@@ -15,15 +15,37 @@
 <body>
     <div>
         <h1>Crystals Collector</h1>
+    </div>
+    <br>
+    <div>
         <h4>Game Directions:</h4>
-        <h4></h4>
-        <p>Wins: <span id="winsCounter"></span></p>
-        <p>Losses: <span id="lossesCounter"></span></p>
+        <br>
+        <p>You will be given a random number at the start of the game.</p>
+        <br>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
+        <br>
+        <p>You win the fame by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <br>
+        <p>Each time the game starts so will the value of each crystal.</p>
+    </div>
+    <br>
+    <div>
+        <div>Wins: <span id="winsCounter"></span></div>
+        <div>Losses: <span id="lossesCounter"></span></div>
+    </div>
+    <br>
+    <div>
         <p>Match your total score to this number: <span id="numToMatch"></span></p>
+    </div>
+    <div>
         <img src="assets/images/blue.jpeg" alt="Blue" class="images" id="blueCrystal">
         <img src="assets/images/orange.jpeg" alt="Orange" class="images" id="orangeCrystal">
         <img src="assets/images/clear.jpeg" alt="Clear" class="images" id="clearCrystal">
         <img src="assets/images/green.jpeg" alt="Green" class="images" id="greenCrystal">
+    </div>
+    <div>
         <p>Your total score is: <span id="totalScore"></span></p>
     </div>
     <script src="assets/javascript/game.js"></script>
