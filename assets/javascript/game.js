@@ -1,8 +1,5 @@
 var blueNum, orangeNum, clearNum, greenNum, randomComputerNum, wins, losses, total, randomNumber
 
-// onclick add number to total
-// if total score === numToMatch print WINNER! to the UI in increment wins by 1
-// if total score excedes numToMatch incrament losses by 1 and reinitalize game
 wins=0
 losses=0
 
