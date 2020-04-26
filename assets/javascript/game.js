@@ -1,6 +1,6 @@
-var blueNum, orangeNum, clearNum, greenNum, randomComputerNum, wins, losses
+var blueNum, orangeNum, clearNum, greenNum, randomComputerNum, wins, losses, total, randomNumber
 
-// the number it was assigned is added to the total score (as a calculator)
+// onclick add number to total
 // if total score === numToMatch print WINNER! to the UI in increment wins by 1
 // if total score excedes numToMatch incrament losses by 1 and reinitalize game
 wins=0
@@ -11,10 +11,12 @@ function init (){
     orangeNum = pickRandomNum(1,12);
     clearNum = pickRandomNum(1,12);
     greenNum = pickRandomNum(1,12);
-    var randomNumber = pickRandomNum(19,120);
+    randomNumber = pickRandomNum(19,120);
+    total=0;
     updateWinValueOnUI(wins);   
     updateLossesValueOnUI(losses);
     updateRandomNumberOnUI(randomNumber);
+    updateTotalScoreOnUI(total);
 }
 
 function pickRandomNum(min,max){
@@ -23,43 +25,56 @@ function pickRandomNum(min,max){
     return randomNum;
 }
 
-function calculator(){
-    
+function calculateTotal(numNum){
+    total = numNum + total
+    console.log(total);
+    updateTotalScoreOnUI(total);
+    if (total===randomNumber){
+        wins++
+        init()
+    } else if (total>randomNumber) {
+        losses++
+        init()
+    }
 }
 
 $("#blueCrystal").on("click", function(){
     console.log(blueNum, "Blue");
-    return blueNum;
+    calculateTotal(blueNum);
 });
 
 $("#orangeCrystal").on("click", function(){
     console.log(orangeNum, "Orange");
-    return orangeNum;
+    calculateTotal(orangeNum);
 });
 
 $("#clearCrystal").on("click", function(){
     console.log(clearNum, "Clear");
-    return clearNum;
+    calculateTotal(clearNum);
 });
 
 $("#greenCrystal").on("click", function(){
     console.log(greenNum, "Green");
-    return greenNum;
+    calculateTotal(greenNum);
 });
 
 
 
 
 function updateWinValueOnUI (newWinValue){
-    document.getElementById("winsCounter").innerHTML = newWinValue;
+    $("#winsCounter").html(newWinValue);
 }
 
 function updateLossesValueOnUI (newLossesValue){
-    document.getElementById("lossesCounter").innerHTML = newLossesValue;
+    $("#lossesCounter").html(newLossesValue);
 }
 
 function updateRandomNumberOnUI (newrandomComputerNum){
-    document.getElementById("numToMatch").innerHTML = newrandomComputerNum;
+    $("#numToMatch").html(newrandomComputerNum);
+}
+
+function updateTotalScoreOnUI (newTotalScore){
+    $("#totalScore").html(newTotalScore);
 }
 
 init ()
