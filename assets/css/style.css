@@ -4,6 +4,32 @@
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 90px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80%;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+h4 {
+    width: 80%;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+.directions {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+p {
+    font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
